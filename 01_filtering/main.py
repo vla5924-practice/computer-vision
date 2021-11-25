@@ -33,7 +33,6 @@ normalized = cv2.normalize(blurred, None, 0, 1, cv2.NORM_MINMAX, cv2.CV_32F)
 
 bilateral = cv2.bilateralFilter(cropped, 10, 75, 75)
 
-# TODO: Sharpening???
 kernel = numpy.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 sharpened = cv2.filter2D(cropped, -1, kernel)
 
